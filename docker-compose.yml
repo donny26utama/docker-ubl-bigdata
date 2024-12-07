@@ -1,0 +1,28 @@
+services:
+  node-main:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-main
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data/node-main:/data
+  node-one:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-one
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data/node-main:/data
+  node-two:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-two
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data/node-main:/data
